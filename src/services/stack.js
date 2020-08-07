@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 var Stack = /** @class */ (function () {
     function Stack() {
         var _this = this;
@@ -16,9 +18,14 @@ var Stack = /** @class */ (function () {
         var _this = this;
         // push item to the stack
         //  empujar varios elemento a la pila
-        items.forEach(function (item) {
-            _this._items.push(item);
-        });
+        if (typeof (items) === 'object') {
+            items.forEach(function (item) {
+                _this._items.push(item);
+            });
+        }
+        else {
+            this._items.push(items);
+        }
         return this._items;
     };
     Stack.prototype.pop = function () {
@@ -39,11 +46,4 @@ var Stack = /** @class */ (function () {
     };
     return Stack;
 }());
-var stack = new Stack(73, 89, 9322);
-for (var i = 0; i < 2000; i++) {
-    stack.push(i);
-}
-console.log(stack.peek());
-stack.pop();
-console.log(stack.peek());
-console.log(stack._items);
+exports["default"] = Stack;

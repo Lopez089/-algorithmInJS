@@ -1,31 +1,16 @@
-class Stack {
-  _items: string[];
-  constructor() {
-    this._items = [];
-  }
+import Stack from './services/stack'
 
-  push(item: string) {
-    // push item to the stack
-    return this._items.push(item);
-  }
 
-  pop() {
-    // saca el elemento superior (último elemento) de stack
-    return this._items.pop();
-  }
+// Instancia Stack //
+const stack = new Stack(73, 89, 9322);
 
-  peek() {
-    // mira cuál es el último elemento en pila
-    return this._items[this._items.length - 1];
-  }
-
-  size() {
-    // no. de elementos en la pila
-    return this._items.length;
-  }
-
-  isEmpty() {
-    // devuelve si la pila está vacía o no
-    return this._items.length === 0;
-  }
+for (let i: number = 0; i < 2000; i++) {
+  stack.push(i);
 }
+
+console.log(stack.peek());
+
+stack.pop();
+console.log(stack.peek());
+
+console.log(stack._items);
