@@ -1,6 +1,15 @@
 "use strict";
 exports.__esModule = true;
-//////////////////////////// instancia Queue //////////////////// 
+var likendList_1 = require("./likendList");
+//////////////////////////// instancia Likendlist //////////////////// 
+var likedList = new likendList_1["default"];
+likedList.append(10);
+likedList.append(20);
+likedList.append(50);
+console.log(likedList.printValue());
+likedList.append(300);
+console.log(likedList.printValue());
+///////////// instancia Queue //////////////////// 
 //  const queue = new(Queue)
 // queue.enqueue(90)
 // queue.enqueue(1)

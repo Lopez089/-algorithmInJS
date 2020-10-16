@@ -1,8 +1,24 @@
 //import Stack from './services/stack'
 import Queue from './queue'
+import DoublyLinkedList from './likendList'
+
+//////////////////////////// instancia Likendlist //////////////////// 
+
+const likedList = new DoublyLinkedList
+
+likedList.append(10)
+likedList.append(20)
+likedList.append(50)
+console.log(likedList.printValue())
+likedList.append(300)
+console.log(likedList.printValue())
 
 
-//////////////////////////// instancia Queue //////////////////// 
+
+
+
+
+///////////// instancia Queue //////////////////// 
 //  const queue = new(Queue)
 // queue.enqueue(90)
 // queue.enqueue(1)
